@@ -62,9 +62,11 @@ print(st2)
 # Let us redefine the Employee class.
 
 class Employee :
+    num_of_employee = 0
     hike = 30
 
     def __init__(self, fn, ln, pay):
+        Employee.num_of_employee += 1
         self.first_name = fn
         self.last_name = ln
         self.pay = pay
@@ -92,6 +94,40 @@ print(emp1.hike)
 
 # ========================================================================================
 
+# print namespace of employee object. Variables in the object.
+
+print(emp1.__dict__)
+
+# print namespace of the class.
+
+print(Employee.__dict__)
+
+# =======================================================================================
+
+print("Printing hikes.")
+print("emp1", emp1.hike)
+print("emp2",  emp2.hike)
+
+print(Employee.hike)
+
+Employee.hike = 50
+
+print("Changed Employee.hike to 50")
+print("emp1", emp1.hike)
+print("emp2", emp2.hike)
+
+print(Employee.hike)
 
 
+emp1.hike = 60 # creates a new instance variable called hike and overrides the class variable.
+print("Changed emp1.hike to 60")
+
+
+print("emp1", emp1.hike)
+print("emp2", emp2.hike)
+
+print(Employee.hike)
+
+print("num employees :", Employee.num_of_employee)
+# =======================================================================================
 
