@@ -1,3 +1,39 @@
+# GENERATORS
+# Generators are more efficient than lists.
+
+#list comprehension
+
+# this is a list object
+squares_list = [x * x for x in range(10)]
+print(squares_list)
+
+#this is a generator
+squares_gen = (x*x for x in range(10))
+print(squares_gen)
+
+for square in squares_gen:
+    print(square)
+
+# Performance enhancement demo
+import m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("=====================================================================")
+# TEMPLATES
+
 from string import Template
 
 t = Template('x is $x')
